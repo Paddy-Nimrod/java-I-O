@@ -18,14 +18,14 @@ public class Locations implements Map<Integer, Location> {
 
                     locations.put(location.getLocationID(), location);
 
-                }catch (EOFException e){
+                } catch (EOFException e) {
                     eof = true;
                 }
             }
-        } catch (IOException e) {
-            System.out.println("IOException occurred.");
-        }catch (ClassNotFoundException e){
-
+        } catch (IOException io) {
+            System.out.println("IOException occurred." + io.getMessage());
+        } catch (ClassNotFoundException e) {
+            System.out.println("ClassNotFoundException" + e.getMessage());
         }
 
 //            while (!eof) {
